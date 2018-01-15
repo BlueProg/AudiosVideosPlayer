@@ -1,0 +1,20 @@
+{
+  "datas":
+  [
+    {
+      "title": "NicoNicoNii !",
+      "url": "https://www.youtube.com/watch?v=ZCuW0y2bxk0",
+      "audio": "assets/audios/Niconiconi.mp3"
+    },
+    {
+      "title": "Uguu !",
+      "url": "https://www.youtube.com/watch?v=UTGzW94JlGA",
+      "audio": "assets/audios/Uguu.mp3"
+    },
+    {
+      "title": "Nyanpasu !",
+      "url": "https://www.youtube.com/watch?v=JAEbJs-rnVc",
+      "audio": "assets/audios/Nyanpasu.mp3"
+    }
+  ]
+}
