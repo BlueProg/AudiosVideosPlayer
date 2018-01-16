@@ -2,19 +2,28 @@
   "datas":
   [
     {
-      "title": "NicoNicoNii !",
-      "url": "https://www.youtube.com/watch?v=ZCuW0y2bxk0",
-      "audio": "assets/audios/Niconiconi.mp3"
-    },
-    {
       "title": "Uguu !",
       "url": "https://www.youtube.com/watch?v=UTGzW94JlGA",
-      "audio": "assets/audios/Uguu.mp3"
+      "mediaType": "audio",
+      "media": "assets/audios/Uguu.mp3"
+    },
+    {
+      "title": "NicoNicoNii !",
+      "url": "https://www.youtube.com/watch?v=ZCuW0y2bxk0",
+      "mediaType": "audio",
+      "media": "assets/audios/Niconiconi.mp3"
     },
     {
       "title": "Nyanpasu !",
-      "url": "https://www.youtube.com/watch?v=JAEbJs-rnVc",
-      "audio": "assets/audios/Nyanpasu.mp3"
+      "url": "https://www.youtube.com/watch?v=UTGzW94JlGA",
+      "mediaType": "youtube",
+      "media": "https://www.youtube.com/embed/JAEbJs-rnVc"
+    },
+    {
+      "title": "Sorata, baka !",
+      "url": "https://www.youtube.com/watch?v=Cch7twUVFDA",
+      "mediaType": "video",
+      "media": "assets/audios/SorataBaka.mp4"
     }
   ]
 }

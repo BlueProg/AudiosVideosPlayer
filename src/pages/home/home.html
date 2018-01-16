@@ -7,9 +7,24 @@
 <ion-content padding>
   <div class="card">
   <h2>{{ item.title}}</h2>
-    <audio controls #audioRef>
-      <source src="{{ item.audio }}" type="audio/mpeg">
-    </audio>
+    <div *ngIf="item.mediaType == 'audio'">
+      <audio controls #audioRef>
+        <source src="{{ item.media }}" type="audio/mpeg">
+      </audio>
+    </div>
+    <div *ngIf="item.mediaType == 'video'">
+      <video controls #audioRef>
+        <source src="{{ item.media }}">
+      </video>
+    </div>
+    <div *ngIf="item.mediaType == 'youtube'">
+      <div>
+        <iframe width="560" height="315"
+                [src]='mediaUrl()'
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+        </iframe>
+      </div>
+    </div>
   <a href="{{ item.url}}">Ouvrir sur Youtube</a>
     </div>
   <button ion-button (click)="newRandom()">Encore une !</button>

@@ -11,6 +11,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { DataLoaderProvider } from '../providers/data-loader/data-loader';
 import {HttpClientModule} from "@angular/common/http";
+import { DomSanitizer } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
