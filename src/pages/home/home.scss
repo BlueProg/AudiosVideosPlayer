@@ -1,3 +1,35 @@
 page-home {
 
 }
+
+.audio {
+  margin: 15px;
+}
+
+.video {
+  width: 100%;
+}
+
+.card {
+  text-align: center;
+}
+
+.flex-elem {
+  display: flex;
+}
+
+.link {
+  display: block;
+  margin: 15px;
+}
+
+.next-button {
+  position: fixed;
+  bottom: 70px;
+  left: 50%;
+  &-item {
+    width: 170px;
+    position: relative;
+    left: -50%;
+  }
+}

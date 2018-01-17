@@ -7,25 +7,34 @@
 <ion-content padding>
   <div class="card">
   <h2>{{ item.title}}</h2>
-    <div *ngIf="item.mediaType == 'audio'">
+    <div class="audio" *ngIf="item.mediaType == 'audio'">
       <audio controls #audioRef>
         <source src="{{ item.media }}" type="audio/mpeg">
       </audio>
     </div>
     <div *ngIf="item.mediaType == 'video'">
-      <video controls #audioRef>
+      <video class="video" controls #audioRef>
         <source src="{{ item.media }}">
       </video>
     </div>
     <div *ngIf="item.mediaType == 'youtube'">
-      <div>
+      <div class="flex-elem">
         <iframe width="560" height="315"
                 [src]='mediaUrl()'
                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
         </iframe>
       </div>
     </div>
-  <a href="{{ item.url}}">Ouvrir sur Youtube</a>
+    <div *ngIf="item.pictures">
+      <ion-slides>
+        <ion-slide *ngFor="let picture of item.pictures">
+          <img style="max-height: 300px" data-src="{{picture}}">
+        </ion-slide>
+      </ion-slides>
     </div>
-  <button ion-button (click)="newRandom()">Encore une !</button>
+    <a class="link" href="{{ item.url}}">Ouvrir sur Youtube</a>
+  </div>
+  <div class="next-button">
+    <button class="next-button-item" ion-button (click)="newRandom()">Encore une !</button>
+  </div>
 </ion-content>

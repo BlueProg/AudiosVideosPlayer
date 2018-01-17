@@ -9,7 +9,8 @@ interface Item {
     title: string,
     url: string,
     mediaType: string,
-    media: string
+    media: string,
+    pictures: [string]
 }
 
 @Component({
