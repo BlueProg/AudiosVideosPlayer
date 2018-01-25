@@ -34,29 +34,33 @@ export class HomePage implements OnInit, OnDestroy, AfterViewInit {
       .pluck('datas')
       .subscribe((datas: [Item]) => {
         this.datas = datas;
-        this.item = datas[Math.floor(Math.random() * (datas.length))];
+        this.item = datas[this.randItem()];
       });
   }
 
   ngAfterViewInit(): void {
     this.audioElem.changes.subscribe(datas => {
       if (datas.first) {
-
-        datas.first.nativeElement.load()
-        datas.first.nativeElement.play()
+		this.loadAndPlay(datas);
       }
     })
   }
 
-  newRandom() {
-    this.item = Object.assign({}, this.datas[Math.floor(Math.random() * (this.datas.length))]);
-    if (this.audioElem.first) {
-
-      this.audioElem.first.nativeElement.load();
-      this.audioElem.first.nativeElement.play();
-    }
+  randItem() {
+	return Math.floor(Math.random() * (this.datas.length));
   }
 
+  loadAndPlay(audio) {
+	audio.first.nativeElement.load();
+	audio.first.nativeElement.play();
+  }
+
+  newRandom() {
+    this.item = Object.assign({}, this.datas[this.randItem()]);
+    if (this.audioElem.first) {
+      this.loadAndPlay(this.audioElem);
+    }
+  }
 
   mediaUrl() {
     return this.sanitizer.bypassSecurityTrustResourceUrl(this.item.media);
